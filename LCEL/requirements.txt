@@ -1,13 +1,17 @@
 langchain
 langchain-community
 langchain_core
+langchain-chroma
+langchain-groq
+langchain_huggingface
+
 
 python-dotenv
 ipykernel
 openai
-langchain-groq
 
 fastapi
 langserve
 uvicorn
 sse_starlette
+
