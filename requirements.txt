@@ -16,3 +16,4 @@ uvicorn
 sse_starlette
 
 bs4
+streamlit
