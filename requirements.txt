@@ -1,9 +1,10 @@
 langchain
-langchain-community
+langchain_community
 langchain_core
 langchain-chroma
 langchain-groq
 langchain_huggingface
+langchain_ollama
 
 
 python-dotenv

@@ -19,10 +19,10 @@ prompts=ChatPromptTemplate.from_messages([
 ]
 )
 
-def generate_response(engine,question,temperature,max_tokens):
-    llm=Ollama(llm=engine,temperature=temperature,max_tokens=max_tokens)
+def generate_response(question,llm,temperature,max_tokens):
+    llm=Ollama(model="mistral")
     parser=StrOutputParser()
-    chain=prompts|llm|StrOutputParser
+    chain=prompts|llm|parser
     answer=chain.invoke({"question":question})
     return answer
 
@@ -39,7 +39,7 @@ temperature=st.sidebar.slider("Temperature",min_value=0.0,max_value=1.0,value=0.
 max_tokens = st.sidebar.slider("Max Tokens", min_value=50, max_value=300, value=150)
 
 ## MAin interface for user input
-st.write("Goe ahead and ask any question")
+st.write("Go ahead and ask any question")
 user_input=st.text_input("You:")
 
 
