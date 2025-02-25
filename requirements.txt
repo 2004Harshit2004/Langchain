@@ -22,3 +22,7 @@ faiss-cpu
 pypdf
 langchain_chroma
 flask_cors
+
+arxiv
+wikipedia
+duckduckgo-search
